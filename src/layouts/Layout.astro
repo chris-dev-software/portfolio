@@ -1,22 +1,35 @@
+---
+import Background from "@components/Background.astro";
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header";
+import "@fontsource/poppins"
+---
+
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Desarrollador de software | Christopher Romero</title>
+  </head>
+  <body>
+    <Background />
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+<style is:global >
+  html{
+    scroll-behavior: smooth;
+  }
+  
+  body{
+    font-family: 'Poppins', sans-serif;
+  }
 </style>
